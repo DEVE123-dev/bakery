@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cathlyn's Baked Goods</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -29,7 +30,7 @@
       z-index: -1;
     }
 
-    .mydiv {
+    header {
       background-color: #ffcb8c;
       border-bottom: 4px solid #4b3f30;
       text-align: center;
@@ -37,7 +38,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    h1 {
+    header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin: 0;
@@ -54,22 +55,6 @@
       width: 90%;
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    p {
-      font-size: 1.1rem;
-      text-align: center;
-      background-color: rgba(255,255,255,0.85);
-      padding: 20px;
-      margin: 30px auto;
-      border-radius: 10px;
-      max-width: 800px;
-      line-height: 1.6;
-    }
-
-    p em {
-      color: #c45e2e;
-      font-style: italic;
     }
 
     .header-buttons {
@@ -114,11 +99,51 @@
       transform: scale(1.05);
     }
 
+    /* Slideshow Section */
+    .slideshow-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .slideshow-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #c45e2e;
+    }
+
+    .slideshow-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #999;
+    }
+
     footer {
       background-color: #4b3f30;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       margin-top: 60px;
     }
 
@@ -128,12 +153,24 @@
       margin-bottom: 10px;
     }
 
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .footer-section {
+      background-color: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
     .social-icons {
-      margin: 20px 0;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 15px;
+      margin-top: 15px;
     }
 
     .social-icons a {
@@ -163,7 +200,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      h1 {
+      header h1 {
         font-size: 2.2rem;
       }
 
@@ -187,54 +224,23 @@
         font-size: 20px;
       }
 
-      p {
-        font-size: 1rem;
-        padding: 15px;
+      .slideshow-container {
+        flex-direction: column;
+        align-items: center;
       }
 
-      footer {
-        padding: 30px 15px;
-      }
-
-      .social-icons a {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      .big-red-button {
-        font-size: 18px;
-        padding: 16px;
-      }
-
-      .header-buttons a button {
-        font-size: 14px;
-        padding: 10px;
-      }
-
-      p {
-        font-size: 0.95rem;
-      }
-
-      footer em {
-        font-size: 1rem;
-      }
-
-      .developer-name {
-        font-size: 0.95rem;
+      .slide {
+        width: 90%;
+        height: 180px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="mydiv">
+  <header>
     <h1>Cathlyn's Baked Goods</h1>
-  </div>
+  </header>
 
   <div class="image-container">
     <img src="logo.png" alt="Baked Goods">
@@ -247,20 +253,43 @@
 
   <a href="menu.html" class="big-red-button">Our Menu</a>
 
+  <section class="slideshow-section">
+    <h2>Featured Products</h2>
+    <div class="slideshow-container">
+      <div class="slide">Image 1</div>
+      <div class="slide">Image 2</div>
+      <div class="slide">Image 3</div>
+      <div class="slide">Image 4</div>
+    </div>
+  </section>
+
   <footer>
     <em>"A taste of heaven in every bite"</em>
-    <p>Follow Us</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">📘</a>
-      <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">🐦</a>
-      <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">📸</a>
-      <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">🔗</a>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">📘</a>
+          <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">🐦</a>
+          <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">📸</a>
+          <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">🔗</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:cathlynek@gmail.com">cathlynek@gmail.com</a></p>
+        <p>Location: Bomana Turn-off, Port Moresby</p>
+        <p>P.O. BOX 414</p>
+      </div>
+      <div class="footer-section">
+        <h3>Developer</h3>
+        <p><strong>Website Developed by:</strong><br>
+        <span class="developer-name">Benjamin Bino</span><br>
+        Year 2 IT Student</p>
+      </div>
     </div>
-    <p>Contact: <a href="mailto:cathlynek@gmail.com">cathlynek@gmail.com</a></p>
-    <p><strong>Website Developed by:</strong><br>
-      <span class="developer-name">Benjamin Bino</span><br>
-      Year 2 IT Student</p>
   </footer>
 
 </body>
 </html>
+``
