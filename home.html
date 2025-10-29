@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cathlyn's Baked Goods</title>
+    <style>
+        body {
+            background-color: #f7e1d7; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4b3f30; 
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background.jfif'); 
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); 
+            z-index: -1;
+        }
+
+        .mydiv {
+            border: 5px solid #4b3f30; 
+            background-color: #ffcb8c; 
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        h1 {
+            color: #4b3f30; 
+            font-size: 3em;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        img {
+            width: 100%; 
+            max-width: 300px; 
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p em {
+            font-style: italic;
+            color: #c45e2e; 
+        }
+
+        .header-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .header-buttons a button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #ff6600; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-buttons a button:hover {
+            background-color: #e65c00;
+        }
+
+        .big-red-button {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            font-size: 24px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 50px auto; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .big-red-button:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #4b3f30;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: #ff6600;
+        }
+
+        .social-icons {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            font-size: 2em;
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ff6600;
+        }
+
+        .developer-name {
+            color: black;              
+            text-decoration: underline;
+            text-decoration-color: red; 
+    </style>
+</head>
+<body>
+
+    <div class="mydiv">
+        <h1>Cathlyn's Baked Goods</h1>
+    </div>
+
+    <div class="image-container">
+        <img src="images/logo.png" alt="Baked Goods">
+    </div>
+
+    <div class="header-buttons">
+       
+        <a href="news & events.html">
+            <button>News & Events</button>
+        </a>
+       
+        <a href="about.html">
+            <button>About Us</button>
+        </a>
+    </div>
+    <a href="menu.html" class="big-red-button">Our Menu</a>
+
+    <footer>
+        <em>"A taste of heaven in every bite"</em>
+        <br>
+        <p>Follow Us</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">📘</a>
+            <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">🐦</a>
+            <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://www.linkedin.com/company/yourpage" target="_blank" aria-label="LinkedIn">🔗</a>
+        </div>
+        <br>
+        <p>Contact: <a href="mailto:cathlynek@gmail.com">cathlynek@gmail.com</a></p>
+        <p><strong>Website Developed by:</strong><br>
+            <span class="developer-name">Benjamin Bino</span><br>
+            Year 2 IT Student</p>
+    </footer>
+
+</body>
+</html>
