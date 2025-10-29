@@ -1,129 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Cathlyn's Baked Goods</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0e6d6; /* Light tan background */
-            color: #5d4037; /* Dark brown text */
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Cathlyn's Baked Goods</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0e6d6;
+      color: #5d4037;
+      margin: 0;
+      padding: 0;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 2.5em;
-            color: #ff6600;
-        }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2.5rem;
+      color: #ff6600;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 50px;
-            color: #6a4e23;
-        }
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: #6a4e23;
+    }
 
-        .menu-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
+    .menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
 
-        .menu-item {
-            background-color: #fff;
-            border: 2px solid #d7a15f;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    .menu-item {
+      background-color: #fff;
+      border: 2px solid #d7a15f;
+      border-radius: 10px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-        .menu-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
 
-        .item-name {
-            font-size: 1.5em;
-            margin: 15px 0;
-        }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
-        .item-description {
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
+    .item-name {
+      font-size: 1.4rem;
+      margin: 15px 0 10px;
+      font-weight: 600;
+    }
 
-        .item-price {
-            font-size: 1.2em;
-            color: #ff6600;
-            font-weight: bold;
-        }
-    </style>
+    .item-description {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .item-price {
+      font-size: 1.2rem;
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+    .button-group {
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .button-group button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+    }
+
+    .order-btn {
+      background-color: #ff6600;
+    }
+
+    .order-btn:hover {
+      background-color: #e65c00;
+    }
+
+    .contact-btn {
+      background-color: #ff3399;
+    }
+
+    .contact-btn:hover {
+      background-color: #cc297a;
+    }
+
+    .home-btn {
+      background-color: #8b5e3c;
+    }
+
+    .home-btn:hover {
+      background-color: #6e4a2f;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .menu-item {
+        width: 90%;
+      }
+
+      .button-group button {
+        width: 90%;
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Our Delicious Bakery Menu</h1>
-    <h2>Freshly Baked with Love</h2>
+  <h1>Our Delicious Bakery Menu</h1>
+  <h2>Freshly Baked with Love</h2>
 
-    <div class="menu-list">
-        <!-- Item 1: Croissant -->
-        <div class="menu-item">
-            <img src="croissant.jpeg" alt="Croissant">
-            <div class="item-name">Classic Croissant</div>
-            <div class="item-description">A buttery, flaky pastry that’s perfect for breakfast or as a snack.</div>
-            <div class="item-price">k2.50</div>
-        </div>
-
-        <!-- Item 2: Chocolate Cake -->
-        <div class="menu-item">
-            <img src="rich chocolate cake.jpeg" alt="Chocolate Cake">
-            <div class="item-name">Rich Chocolate Cake</div>
-            <div class="item-description">A moist and decadent chocolate cake, topped with smooth ganache.</div>
-            <div class="item-price">k4.75</div>
-        </div>
-
-        <!-- Item 3: Cupcakes -->
-        <div class="menu-item">
-            <img src="vanilla cupcakes.jpeg" alt="Cupcakes">
-            <div class="item-name">Vanilla Cupcakes</div>
-            <div class="item-description">Light and fluffy vanilla cupcakes, topped with creamy frosting.</div>
-            <div class="item-price">k3.00</div>
-        </div>
-
-        <!-- Item 4: Scones -->
-        <div class="menu-item">
-            <img src="scones.jpeg" alt="Scones">
-            <div class="item-name">Blueberry Scones</div>
-            <div class="item-description">Freshly baked scones with a burst of blueberries, perfect with tea.</div>
-            <div class="item-price">k2.75</div>
-        </div>
-
-        <!-- Item 5: Cookies -->
-        <div class="menu-item">
-            <img src="chocolate chip cookies.jpeg" alt="Cookies">
-            <div class="item-name">Chocolate Chip Cookies</div>
-            <div class="item-description">Warm and gooey chocolate chip cookies, fresh out of the oven.</div>
-            <div class="item-price">k1.50</div>
-        </div>
-
-        <!-- Item 6: Bread -->
-        <div class="menu-item">
-            <img src="bread.jpeg" alt="Bread">
-            <div class="item-name">Fresh Baked Bread</div>
-            <div class="item-description">Soft and warm, our freshly baked bread is perfect for sandwiches.</div>
-            <div class="item-price">k3.25</div>
-        </div>
+  <div class="menu-list">
+    <div class="menu-item">
+      <img src="croissant.jpeg" alt="Croissant">
+      <div class="item-name">Classic Croissant</div>
+      <div class="item-description">A buttery, flaky pastry that’s perfect for breakfast or as a snack.</div>
+      <div class="item-price">k2.50</div>
     </div>
+
+    <div class="menu-item">
+      <img src="rich chocolate cake.jpeg" alt="Chocolate Cake">
+      <div class="item-name">Rich Chocolate Cake</div>
+      <div class="item-description">A moist and decadent chocolate cake, topped with smooth ganache.</div>
+      <div class="item-price">k4.75</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="vanilla cupcakes.jpeg" alt="Cupcakes">
+      <div class="item-name">Vanilla Cupcakes</div>
+      <div class="item-description">Light and fluffy vanilla cupcakes, topped with creamy frosting.</div>
+      <div class="item-price">k3.00</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="scones.jpeg" alt="Scones">
+      <div class="item-name">Blueberry Scones</div>
+      <div class="item-description">Freshly baked scones with a burst of blueberries, perfect with tea.</div>
+      <div class="item-price">k2.75</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="chocolate chip cookies.jpeg" alt="Cookies">
+      <div class="item-name">Chocolate Chip Cookies</div>
+      <div class="item-description">Warm and gooey chocolate chip cookies, fresh out of the oven.</div>
+      <div class="item-price">k1.50</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="bread.jpeg" alt="Bread">
+      <div class="item-name">Fresh Baked Bread</div>
+      <div class="item-description">Soft and warm, our freshly baked bread is perfect for sandwiches.</div>
+      <div class="item-price">k3.25</div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button class="order-btn" onclick="window.location.href='https://www.example.com';">Order Now</button>
+    <button class="contact-btn" onclick="window.location.href='https://www.example.com/contact';">Contact Us</button>
+    <button class="home-btn" onclick="window.location.href='index.html';">Back to Home</button>
+  </div>
 
 </body>
 </html>
-
